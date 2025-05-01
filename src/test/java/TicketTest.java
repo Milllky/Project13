@@ -21,8 +21,8 @@ public class TicketTest {
         manager.add(ticket5);
         manager.add(ticket6);
 
-        Ticket[] actual = manager.search("SVX","SVO");
-        Ticket[] expected = {ticket4,ticket1};
+        Ticket[] actual = manager.search("SVX", "SVO");
+        Ticket[] expected = {ticket4, ticket1};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -45,7 +45,7 @@ public class TicketTest {
         manager.add(ticket5);
         manager.add(ticket6);
 
-        Ticket[] actual = manager.search("SVO","SVX");
+        Ticket[] actual = manager.search("SVO", "SVX");
         Ticket[] expected = {};
 
         Assertions.assertArrayEquals(expected, actual);
@@ -69,7 +69,7 @@ public class TicketTest {
         manager.add(ticket5);
         manager.add(ticket6);
 
-        Ticket[] actual = manager.search("SVX","LED");
+        Ticket[] actual = manager.search("SVX", "LED");
         Ticket[] expected = {ticket2};
 
         Assertions.assertArrayEquals(expected, actual);
@@ -94,7 +94,7 @@ public class TicketTest {
         manager.add(ticket6);
         TicketTimeComparator comparator = new TicketTimeComparator();
 
-        Ticket[] actual = manager.searchAndSortBy("SVX", "SVO", comparator );
+        Ticket[] actual = manager.searchAndSortBy("SVX", "SVO", comparator);
         Ticket[] expected = {ticket1, ticket4};
 
         Assertions.assertArrayEquals(expected, actual);
@@ -119,7 +119,7 @@ public class TicketTest {
         manager.add(ticket6);
         TicketTimeComparator comparator = new TicketTimeComparator();
 
-        Ticket[] actual = manager.searchAndSortBy("SVX", "AER", comparator );
+        Ticket[] actual = manager.searchAndSortBy("SVX", "AER", comparator);
         Ticket[] expected = {ticket6};
 
         Assertions.assertArrayEquals(expected, actual);
@@ -144,7 +144,7 @@ public class TicketTest {
         manager.add(ticket6);
         TicketTimeComparator comparator = new TicketTimeComparator();
 
-        Ticket[] actual = manager.searchAndSortBy("SVX", "ANT", comparator );
+        Ticket[] actual = manager.searchAndSortBy("SVX", "ANT", comparator);
         Ticket[] expected = {};
 
         Assertions.assertArrayEquals(expected, actual);
